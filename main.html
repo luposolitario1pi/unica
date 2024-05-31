@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+    <title>La Grecia</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Mappa della Grecia</title>
+
+</head>
+
+<body background='immgaini/sfondomeghio.jpg'>
+
+    <img src="immgaini/METTICI QUALCOSA.png" class="statua" alt="statua">
+    <br> 
+
+    <div class="container">
+        <h1>Lavoro UNICA: La Grecia</h1>
+        <p>La letteratura greca alle sue origini non è "letteraria": nasce in un contesto che vede prevalere l'oralità sulla scrittura. La forma di comunicazione prediletta è infatti la voce, accompagnata da musica ed eseguita dal vivo. 
+            L'identità della Grecia antica deriva da due ondate di colonizzazione, dalla nascita di tre gruppi dialettali principali -dorico, ionico e corinzio- e dalla nascita della πόλις.
+            Variegate per usi e costumi, le polis conobbero oligarchie, tirannidi e protodemocrazie, presso cui soggiornarono ogni sorta di poeti e intellettuali.</p>
+        <img src="immgaini/mappons.png" alt="Grecia" usemap="#mappaGrecia">
+
+        <div class="container-flex">
+            <div id="filosofi" class="container-3" onclick="trovaSito('filosofi')">
+                Filosofi
+            </div>
+            <div id="drammaturghi" class="container-3" onclick="trovaSito('drammaturghi')">
+                Drammaturghi
+            </div>
+            <div id="oratori" class="container-3" onclick="trovaSito('oratori')">
+                Oratori
+            </div>
+        </div>
+   
+    <div class="sidebar">
+        <div class="too">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                    <a href="#">
+                        <i class="bx bxs-grid-alt"></i>
+                        <span class="nav-item">Poeti</span>
+                    </a>
+                    <span class="tooltip">Poeti</span>
+            </li>
+            <li>
+                    <a href="https://it.wikipedia.org/wiki/Saffo">
+                    <i class="bx bxs-heart-circle"></i>
+                    <span class="nav-item">Saffo</span>
+                    </a>
+                    <span class="tooltip">Saffo</span>
+            </li>
+            <li>
+                    <a href="https://it.wikipedia.org/wiki/Omero">
+                    <i class="bx bxs-bank"></i>
+                    <span class="nav-item">Omero</span>
+                    </a>
+                    <span class="tooltip">Omero</span>
+           </li>
+            <li>
+                    <a href="https://it.wikipedia.org/wiki/Gaio_Valerio_Catullo">
+                    <i class="bx bx-male-female"></i>
+                    <span class="nav-item">Catullo</span>
+                    </a>
+                    <span class="tooltip">Catullo</span>
+            </li>
+            <li>
+                    <a href="https://it.wikipedia.org/wiki/William_Shakespeare">
+                        <i class="bx bxs-shield-minus"></i>
+                        <span class="nav-item">Shakespeare</span>
+                    </a>
+                    <span class="tooltip">Shakespeare</span>
+            </li>
+        </ul>
+    </div>
+
+        <script>
+            let btn=document.querySelector('#btn')
+            let sidebar = document.querySelector('.sidebar')
+        
+            btn.onclick=function () {
+                sidebar.classList.toggle('active');
+            };
+            
+            function trovaSito(idElemento) {
+                let elemento=document.getElementById(idElemento);
+                let parola=elemento.textContent.trim();
+                window.location.href=parola+".html";
+            }
+        </script>
+    </body>
+</html>
